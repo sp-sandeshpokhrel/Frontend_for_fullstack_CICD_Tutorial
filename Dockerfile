@@ -2,7 +2,7 @@ FROM node:18-alpine3.17 AS builder
 WORKDIR /usr/src/app
 COPY ./** ./
 RUN yarn
-RUN yarn build:prod
+RUN yarn build
 
 FROM node:18-alpine3.17 AS prod
 WORKDIR /usr/src/app

@@ -37,4 +37,4 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: username/tutorial-frontend:main
+          tags: fullstackcicd/tutorial-frontend:main

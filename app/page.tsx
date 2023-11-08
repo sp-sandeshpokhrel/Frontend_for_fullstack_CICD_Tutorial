@@ -17,7 +17,13 @@ export default function Home() {
   return (
     <div>
       <p>Your Sample Data</p>
-      <p>{loading ? "Fetching..." : data.map((dat) => <p>{dat.text}</p>)}</p>
+      <p>
+        {loading
+          ? "Fetching..."
+          : data.map((dat: { id: string; text: string }) => (
+              <p key={dat.id}>{dat.text}</p>
+            ))}
+      </p>
     </div>
   );
 }

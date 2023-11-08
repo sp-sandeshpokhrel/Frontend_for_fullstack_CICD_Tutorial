@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [data, setData] = useState<any>();
   const [loading, setLoading] = useState(true);
-  console.log(process.env.NEXT_PUBLIC_BACKEND_URL);
+  console.log("Backend url", process.env.NEXT_PUBLIC_BACKEND_URL);
   useEffect(() => {
     fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/sampledata`).then((res) => {
       res.json().then((data) => {
